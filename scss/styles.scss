@@ -11,7 +11,16 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: $main;
+    color: $text;
+}
+
+.welcome {
+    background: url("../images/bg-header-movil.jpg") no-repeat center top;
+    color: #FFF;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .header-custom {
@@ -68,14 +77,16 @@ body {
     border: 0;
     border-radius: 5px 0 0 5px;
     padding: 1rem;
+    flex: 1 1 auto;
 }
 
 .container-block input[type="submit"] {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     border: 0;
     border-radius: 0 5px 5px 0;
     background: $main;
     color: #FFF;
+    padding: 0 1rem;
 }
 
 #menu-main {
@@ -101,4 +112,240 @@ body {
 #menu-main ul a:hover,
 #menu-main ul li.active a {
     color: $main;
+}
+
+.text-header {
+    margin-top: 4rem;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+
+.btn-primary {
+    color: #FFF;
+    background-color: $main;
+    border-color: transparent;
+    margin-top: 1rem;
+    transition: all .5s ease;
+}
+
+.btn-primary:hover,
+.btn-menu:focus,
+.btn-primary:active:hover {
+    background-color: $secundary;
+    border-color: transparent;
+}
+
+.arrow-down a {
+    display: inline-block;
+    color: #FFF;
+    font-size: 4rem;
+    animation: arrow-animate 2s ease-in-out infinite;
+}
+
+@keyframes arrow-animate {
+    from {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(6px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+/************************
+*****section company*****
+*************************/
+
+.company {
+    background-color: $main;
+    color: #FFF;
+}
+
+.company img {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+}
+
+
+/************************
+*****section why-us*****
+*************************/
+
+.why-us h2 span {
+    color: $main;
+}
+
+.why-us ul,
+.why-us ul li {
+    list-style: none;
+}
+
+.why-us ul li .fa {
+    font-size: 2.3rem;
+    background-color: $secundary;
+    border-radius: 50%;
+    width: 4.7rem;
+    height: 4.7rem;
+    line-height: 4.5rem;
+    color: #FFF;
+}
+
+.why-us ul li .container-election h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: .8rem;
+}
+
+.why-us ul li {
+    min-height: 10rem;
+}
+
+
+/************************
+*****section services*****
+*************************/
+
+.services {
+    background: url("../images/bg-services-movil.jpg") no-repeat center center;
+    background-size: cover;
+    color: #FFF;
+}
+
+.services article {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.services img {
+    flex: 0 0 60px;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+
+.services h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    flex: 1 1 auto;
+}
+
+.services h3 a {
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.services h3 a::after {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 2rem;
+    margin-left: 1rem;
+    opacity: .5;
+    position: relative;
+    left: 0;
+    transition: all .5s ease;
+}
+
+.services h3 a:hover::after {
+    left: -.5rem;
+    opacity: 1;
+    color: $main;
+}
+
+
+/************************
+*****section last projects*****
+*************************/
+
+.last-projects a {
+    text-decoration: none;
+}
+
+.last-projects a h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: $text;
+}
+
+.last-projects .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.last-projects .owl-nav {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.last-projects .owl-nav button.owl-prev,
+.last-projects .owl-nav button.owl-next {
+    font-size: 3rem;
+    margin: 0 .5rem;
+    color: $main;
+    transition: all .5s ease;
+}
+
+.last-projects .owl-nav button.owl-prev:hover,
+.last-projects .owl-nav button.owl-next:hover {
+    color: $secundary;
+}
+
+
+/******************************
+***** section footer *****
+*******************************/
+
+.footer {
+    background-color: $text;
+    color: #FFF;
+    text-align: center;
+    font-size: .9rem;
+}
+
+.footer .social-media {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .social-media a {
+    color: #FFF;
+    font-size: 2rem;
+    margin: 0 .5rem;
+    transition: all .5s ease;
+}
+
+.footer .social-media a:hover {
+    opacity: .7;
+}
+
+.arrow-up {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    color: $main;
+    text-decoration: none;
+    z-index: 999999;
+    line-height: 0;
+    transition: all .5s ease;
+}
+
+.arrow-up:hover,
+.arrow-up:focus {
+    outline: 0;
+    text-decoration: none;
+    color: #FFF;
 }
